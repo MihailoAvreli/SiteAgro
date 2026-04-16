@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РазъёмАгро — Инновационное разъёмное соединение</title>
+    <meta name="description" content="Инновационное разъёмное соединение для сельхозмашин. Надёжнее в 3,5 раза, дешевле в производстве на 15-20%, быстрее в сборке.">
+    <meta name="keywords" content="разъёмное соединение, сельхозмашины, агротехника, сельское хозяйство, тракторы, комбайны, инновации, патент, производство">
+    <meta name="author" content="Иванов Михаил, Ставропольский ГАУ">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.jpg?v=2">
+    <link rel="shortcut icon" href="img/logo.jpg?v=2">
+    <link rel="apple-touch-icon" href="img/logo.jpg?v=2">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://razemagro.github.io/">
+    <meta property="og:title" content="РазъёмАгро — Инновационное разъёмное соединение">
+    <meta property="og:description" content="Надёжнее в 3,5 раза. Дешевле в производстве на 15-20%. Быстрее в сборке. Патентная разработка для сельхозмашин.">
+    <meta property="og:image" content="img/hero-combine.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://razemagro.github.io/">
+    <meta property="twitter:title" content="РазъёмАгро — Инновационное разъёмное соединение">
+    <meta property="twitter:description" content="Надёжнее в 3,5 раза. Дешевле в производстве на 15-20%. Патентная разработка для сельхозмашин.">
+    <meta property="twitter:image" content="img/hero-combine.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <img src="img/logo.jpg" alt="РазъёмАгро" class="logo-img">
+                <span class="logo-text" data-i18n="logo">РазъёмАгро</span>
+            </a>
+            
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <button class="lang-switch" id="langSwitch">
+                    <span class="lang-option active" data-lang="ru">RU</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </button>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#problem" class="mobile-link" data-i18n="nav.problem">Проблема</a>
+            <a href="#solution" class="mobile-link" data-i18n="nav.solution">Решение</a>
+            <a href="#how-it-works" class="mobile-link" data-i18n="nav.howItWorks">Как работает</a>
+            <a href="#advantages" class="mobile-link" data-i18n="nav.advantages">Преимущества</a>
+            <a href="#production" class="mobile-link" data-i18n="nav.production">Производство</a>
+            <a href="#commercialization" class="mobile-link" data-i18n="nav.commercialization">Рынок</a>
+            <a href="#team" class="mobile-link" data-i18n="nav.team">Команда</a>
+            <a href="#cta" class="mobile-link" data-i18n="nav.contacts">Контакты</a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="img/hero-combine.jpg" alt="Комбайн на закате" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" data-i18n="hero.title">
+                    Разъёмное соединение, которое меняет сельхозмашиностроение
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">
+                    Надёжнее. Дешевле в производстве. Быстрее в сборке.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#solution" class="btn btn-primary">
+                        <span data-i18n="hero.btnProduct">Смотреть продукт</span>
+                    </a>
+                    <a href="#cta" class="btn btn-secondary">
+                        <span data-i18n="hero.btnQuote">Получить КП</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span data-i18n="hero.scroll">Листайте вниз</span>
+                <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Problem Section -->
+    <section class="problem section-dark" id="problem">
+        <div class="section-bg">
+            <img src="img/background-blueprint.jpg" alt="" class="bg-img">
+            <div class="bg-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="problem.label">Проблема</span>
+                <h2 class="section-title" data-i18n="problem.title">
+                    Почему существующие соединения не работают
+                </h2>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card glass-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <path d="M24 4v8M24 36v8M4 24h8M36 24h8M10 10l6 6M32 32l6 6M10 38l6-6M32 16l6-6"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="problem.card1.title">Ломаются в поле</h3>
+                    <p data-i18n="problem.card1.desc">Традиционные соединения выходят из строя при вибрациях и нагрузках сельхозмашин</p>
+                </div>
+                
+                <div class="problem-card glass-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <rect x="8" y="12" width="32" height="24" rx="2"/>
+                            <path d="M8 20h32M16 12v24M32 12v24"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="problem.card2.title">Требуют фрезеровки</h3>
+                    <p data-i18n="problem.card2.desc">Сложные фрезерные операции увеличивают стоимость и время производства</p>
+                </div>
+                
+                <div class="problem-card glass-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <circle cx="24" cy="24" r="16"/>
+                            <circle cx="24" cy="24" r="6"/>
+                            <path d="M24 8v6M24 34v6M8 24h6M34 24h6"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="problem.card3.title">Точная подгонка</h3>
+                    <p data-i18n="problem.card3.desc">Необходимость точной центровки оси усложняет сборку и требует квалификации</p>
+                </div>
+                
+                <div class="problem-card glass-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <circle cx="16" cy="16" r="10"/>
+                            <circle cx="32" cy="32" r="10"/>
+                            <path d="M23 23L25 25"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="problem.card4.title">Малая площадь контакта</h3>
+                    <p data-i18n="problem.card4.desc">Ограниченная площадь сопряжения снижает надёжность и ресурс</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Solution Section -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="solution-grid">
+                <div class="solution-content">
+                    <div class="section-header left">
+                        <span class="section-label" data-i18n="solution.label">Наше решение</span>
+                        <h2 class="section-title" data-i18n="solution.title">
+                            Эксцентричная кольцевая канавка + оседержатель
+                        </h2>
+                        <p class="solution-text" data-i18n="solution.text">
+                            Инновационная конструкция разъёмного соединения на основе оси с эксцентричной кольцевой канавкой и специального оседержателя позволяет быстро и надёжно фиксировать детали без точной центровки и сложной фрезерной обработки.
+                        </p>
+                        <div class="solution-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">3.5×</span>
+                                <span class="stat-label" data-i18n="solution.stat1">больше площадь контакта</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15-20%</span>
+                                <span class="stat-label" data-i18n="solution.stat2">экономия производства</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-visual">
+                    <div class="solution-image-wrapper">
+                        <img src="img/деталь1.jpg" alt="Разъёмное соединение" class="solution-image">
+                        <div class="solution-image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. How It Works Section -->
+    <section class="how-it-works section-dark" id="how-it-works">
+        <div class="section-bg">
+            <img src="img/background-blueprint.jpg" alt="" class="bg-img">
+            <div class="bg-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="howItWorks.label">Принцип работы</span>
+                <h2 class="section-title" data-i18n="howItWorks.title">
+                    Простая сборка за 4 шага
+                </h2>
+            </div>
+            
+            <div class="steps-wrapper">
+                <div class="steps-line">
+                    <div class="steps-progress"></div>
+                </div>
+                
+                <div class="steps-grid">
+                    <div class="step-card glass-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                                <rect x="14" y="4" width="20" height="40" rx="4"/>
+                                <path d="M14 12h20M14 36h20"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="howItWorks.step1.title">Установка оси</h3>
+                        <p data-i18n="howItWorks.step1.desc">Ось с эксцентричной канавкой вставляется в отверстие без точной центровки</p>
+                    </div>
+                    
+                    <div class="step-card glass-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                                <circle cx="24" cy="24" r="16"/>
+                                <circle cx="24" cy="24" r="8"/>
+                                <path d="M24 8v6M24 34v6"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="howItWorks.step2.title">Кольцевая канавка</h3>
+                        <p data-i18n="howItWorks.step2.desc">Эксцентричная канавка создаёт дополнительную площадь контакта</p>
+                    </div>
+                    
+                    <div class="step-card glass-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                                <rect x="8" y="16" width="32" height="16" rx="2"/>
+                                <path d="M8 20h32M8 28h32"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="howItWorks.step3.title">Оседержатель</h3>
+                        <p data-i18n="howItWorks.step3.desc">Специальный оседержатель обеспечивает надёжную фиксацию</p>
+                    </div>
+                    
+                    <div class="step-card glass-card">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                                <path d="M8 24l10 10 22-22"/>
+                                <circle cx="24" cy="24" r="20"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="howItWorks.step4.title">Фиксация</h3>
+                        <p data-i18n="howItWorks.step4.desc">Готовое соединение готово к эксплуатации в полевых условиях</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Advantages Section -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label accent" data-i18n="advantages.label">Преимущества</span>
+                <h2 class="section-title" data-i18n="advantages.title">
+                    Почему наше решение лучше
+                </h2>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card glass-card">
+                    <div class="advantage-image">
+                        <img src="img/чертеж1.jpg" alt="Соединение в поле">
+                    </div>
+                    <div class="advantage-content">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                                <path d="M4 24h40M4 12h40M4 36h40"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="advantages.card1.title">Увеличенная площадь контакта</h3>
+                        <p data-i18n="advantages.card1.desc">В 3,5 раза больше площади сопряжения по сравнению с традиционными соединениями — это значительно повышает надёжность и ресурс</p>
+                    </div>
+                </div>
+                
+                <div class="advantage-card glass-card">
+                    <div class="advantage-image">
+                        <img src="img/cnc-lathe.jpg" alt="Токарная обработка">
+                    </div>
+                    <div class="advantage-content">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                                <circle cx="24" cy="24" r="16"/>
+                                <circle cx="24" cy="24" r="6"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="advantages.card2.title">Без точной установки оси</h3>
+                        <p data-i18n="advantages.card2.desc">Эксцентричная канавка компенсирует отклонения — не нужна сложная центровка при сборке</p>
+                    </div>
+                </div>
+                
+                <div class="advantage-card glass-card">
+                    <div class="advantage-image">
+                        <img src="img/hero-combine.jpg" alt="Техника в работе">
+                    </div>
+                    <div class="advantage-content">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                                <path d="M8 12h32M12 12v28h24V12"/>
+                                <path d="M16 20h16M16 28h16"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="advantages.card3.title">Исключение фрезеровки</h3>
+                        <p data-i18n="advantages.card3.desc">Только токарная обработка — снижение себестоимости и трудозатрат на 15–20%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Production Section -->
+    <section class="production section-dark" id="production">
+        <div class="container">
+            <div class="production-grid">
+                <div class="production-visual">
+                    <div class="production-image-wrapper">
+                        <img src="img/cnc-lathe.jpg" alt="Токарный станок" class="production-image">
+                        <div class="production-particles" id="particles"></div>
+                    </div>
+                </div>
+                
+                <div class="production-content">
+                    <div class="section-header left">
+                        <span class="section-label" data-i18n="production.label">Производство</span>
+                        <h2 class="section-title" data-i18n="production.title">
+                            Мы упростили производство
+                        </h2>
+                        <p class="production-text" data-i18n="production.text">
+                            Токарная обработка вместо сложной фрезеровки. Это сокращает время изготовления, снижает требования к оборудованию и квалификации оператора, а главное — уменьшает себестоимость детали на 15–20%.
+                        </p>
+                        <div class="production-badge">
+                            <span class="badge-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </span>
+                            <span class="badge-text" data-i18n="production.badge">Только токарные операции</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Product in Action Section -->
+    <section class="product-action" id="product-action">
+        <div class="product-action-bg">
+            <img src="img/hero-combine.jpg" alt="Комбайн в работе" class="product-action-img">
+            <div class="product-action-overlay"></div>
+        </div>
+        
+        <div class="container product-action-content">
+            <div class="section-header light">
+                <span class="section-label" data-i18n="productAction.label">Применение</span>
+                <h2 class="section-title" data-i18n="productAction.title">
+                    Работает в реальных условиях
+                </h2>
+                <p class="product-action-text" data-i18n="productAction.text">
+                    Разъёмное соединение проектируется для эксплуатации в тяжёлых полевых условиях: пыль, вибрации, высокие нагрузки. Конструкция обеспечивает надёжную работу комбайнов, тракторов и почвообрабатывающей техники.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Commercialization Section -->
+    <section class="commercialization section-dark" id="commercialization">
+        <div class="section-bg">
+            <img src="img/background-blueprint.jpg" alt="" class="bg-img">
+            <div class="bg-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="commercialization.label">Рынок</span>
+                <h2 class="section-title" data-i18n="commercialization.title">
+                    Коммерциализация
+                </h2>
+            </div>
+            
+            <div class="market-grid">
+                <div class="market-card glass-card">
+                    <h3 data-i18n="commercialization.applications.title">Области применения</h3>
+                    <ul class="market-list">
+                        <li data-i18n="commercialization.applications.1">Сельхозмашиностроение — комбайны, тракторы, почвообрабатывающая техника</li>
+                        <li data-i18n="commercialization.applications.2">Строительная и дорожная техника</li>
+                        <li data-i18n="commercialization.applications.3">Автомобильная промышленность</li>
+                        <li data-i18n="commercialization.applications.4">Промышленное оборудование</li>
+                    </ul>
+                </div>
+                
+                <div class="market-card glass-card">
+                    <h3 data-i18n="commercialization.clients.title">Потенциальные клиенты</h3>
+                    <ul class="market-list">
+                        <li data-i18n="commercialization.clients.1">Производители сельхозмашин (Ростсельмаш, КАМАЗ, МТЗ)</li>
+                        <li data-i18n="commercialization.clients.2">Заводы строительной техники</li>
+                        <li data-i18n="commercialization.clients.3">Автокомпонентные предприятия</li>
+                        <li data-i18n="commercialization.clients.4">Сервисные центры и дилеры</li>
+                    </ul>
+                </div>
+                
+                <div class="market-stats">
+                    <div class="market-stat glass-card">
+                        <span class="market-number" data-target="15">0</span>
+                        <span class="market-suffix">%</span>
+                        <span class="market-label" data-i18n="commercialization.stat1">снижение себестоимости</span>
+                    </div>
+                    <div class="market-stat glass-card">
+                        <span class="market-number" data-target="3.5" data-decimals="1">0</span>
+                        <span class="market-suffix">×</span>
+                        <span class="market-label" data-i18n="commercialization.stat2">надёжнее</span>
+                    </div>
+                    <div class="market-stat glass-card">
+                        <span class="market-number" data-target="20">0</span>
+                        <span class="market-suffix">%</span>
+                        <span class="market-label" data-i18n="commercialization.stat3">экономия трудозатрат</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label accent" data-i18n="team.label">О проекте</span>
+                <h2 class="section-title" data-i18n="team.title">
+                    Команда
+                </h2>
+            </div>
+            
+            <div class="team-card glass-card">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <circle cx="24" cy="16" r="10"/>
+                            <path d="M4 44c0-12 9-20 20-20s20 8 20 20"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name" data-i18n="team.name">Иванов Михаил Сергеевич</h3>
+                    <p class="team-role" data-i18n="team.role">Генеральный директор</p>
+                    <p class="team-bio" data-i18n="team.bio">
+                        Студент 3 курса направления «Агроинженерия», Ставропольский ГАУ. 
+                    </p>
+                    <div class="team-status">
+                        <span class="status-badge" data-i18n="team.status">
+                            Статус: разработка MVP, подготовка к испытаниям
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CTA Section -->
+    <section class="cta section-dark" id="cta">
+        <div class="section-bg">
+            <img src="img/background-blueprint.jpg" alt="" class="bg-img">
+            <div class="bg-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="cta.title">
+                    Интересует сотрудничество?
+                </h2>
+                <p class="cta-text" data-i18n="cta.text">
+                    Свяжитесь для получения коммерческого предложения, технической документации или обсуждения пилотного внедрения.
+                </p>
+                
+                <a href="https://t.me/mihail_0555" target="_blank" class="btn btn-cta pulse">
+                    <span data-i18n="cta.btnPrimary">Получить КП в Telegram</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </a>
+                
+                <div class="contacts-grid">
+                    <a href="https://t.me/mihail_0555" target="_blank" class="contact-card">
+                        <div class="contact-icon telegram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label" data-i18n="contacts.telegram">Telegram</span>
+                            <span class="contact-value">@mihail_0555</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://wa.me/79054613370" target="_blank" class="contact-card">
+                        <div class="contact-icon whatsapp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16.6 14c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.7-.7.9-.1.1-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.1-.3 0-.4.1-.5.1-.1.3-.3.4-.4.1-.1.2-.2.3-.3.1-.1.1-.2 0-.3-.1-.1-.5-1.2-.7-1.7-.2-.5-.4-.4-.5-.4h-.4c-.1 0-.3.1-.5.2-.1.1-1.1 1.1-1.1 2.6 0 1.5 1.1 3 1.2 3.2.1.1 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.2-.3-.3-.5-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.4 5.2L2 22l4.8-1.4c1.5.9 3.2 1.4 5.2 1.4 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.4c-1.7 0-3.2-.5-4.5-1.3l-.3-.2-3.1.8.8-3-.2-.3C3.9 14.8 3.3 13.5 3.3 12c0-4.8 3.9-8.8 8.8-8.8 2.4 0 4.7 1 6.4 2.7 1.7 1.7 2.7 4 2.7 6.4 0 4.8-3.9 8.8-8.8 8.8z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label" data-i18n="contacts.whatsapp">WhatsApp</span>
+                            <span class="contact-value nowrap">+79054613370</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://max.ru" target="_blank" class="contact-card">
+                        <div class="contact-icon max">
+                            <img src="img/max.png.jpeg" alt="MAX" class="contact-icon-img">
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label" data-i18n="contacts.max">MAX</span>
+                            <span class="contact-value nowrap">+7 (934) 026-88-85</span>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:mihaos.st@mail.ru" class="contact-card">
+                        <div class="contact-icon email">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label" data-i18n="contacts.email">Email</span>
+                            <span class="contact-value">mihaos.st@mail.ru</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label accent" data-i18n="partners.label">Поддержка</span>
+                <h2 class="section-title" data-i18n="partners.title">Наши партнёры</h2>
+            </div>
+            
+            <div class="partners-grid">
+                <div class="partner-card glass-card">
+                    <div class="partner-logo">
+                        <img src="img/1.png.webp" alt="Партнёр 1" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="partner-card glass-card">
+                    <div class="partner-logo">
+                        <img src="img/2.png.webp" alt="Партнёр 2" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="partner-card glass-card">
+                    <div class="partner-logo">
+                        <img src="img/3.png.webp" alt="Партнёр 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="partners-support">
+                <p data-i18n="partners.support">Проект создан при поддержке Федерального государственного бюджетного учреждения «Фонд содействия развитию малых форм предприятий в научно-технической сфере» в рамках программы «Студенческий стартап» федерального проекта «Платформа университетского технологического предпринимательства»</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">РазъёмАгро</span>
+                    <p class="footer-copy" data-i18n="footer.copy">© 2025 РазъёмАгро. Все права защищены.</p>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-status" data-i18n="footer.status">Патентные заявки поданы</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
