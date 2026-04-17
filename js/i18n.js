@@ -93,6 +93,11 @@ const i18n = {
             text: 'Токарная обработка вместо сложной фрезеровки. Это сокращает время изготовления, снижает требования к оборудованию и квалификации оператора, а главное — уменьшает себестоимость детали на 15–20%.',
             badge: 'Только токарные операции'
         },
+        liveModel: {
+            label: 'Опытный образец',
+            title: 'Опытный образец в живую',
+            subtitle: 'Посмотрите как выглядит готовое разъёмное соединение в реальности'
+        },
         productAction: {
             label: 'Применение',
             title: 'Работает в реальных условиях',
@@ -237,6 +242,11 @@ const i18n = {
             title: 'We Simplified Manufacturing',
             text: 'Turning instead of complex milling. This reduces manufacturing time, lowers equipment requirements and operator qualification, and most importantly — reduces part cost by 15-20%.',
             badge: 'Turning operations only'
+        },
+        liveModel: {
+            label: 'Prototype',
+            title: 'Live Prototype Model',
+            subtitle: 'See what the finished detachable connection looks like in reality'
         },
         productAction: {
             label: 'Application',

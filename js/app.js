@@ -580,6 +580,79 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // ========================================
+    // CAROUSEL / LIVE MODEL SLIDER
+    // ========================================
+    
+    // Wait a bit to ensure all elements are rendered
+    setTimeout(() => {
+        const carouselTrack = document.getElementById('carouselTrack');
+        const carouselPrev = document.getElementById('carouselPrev');
+        const carouselNext = document.getElementById('carouselNext');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
+        
+        if (!carouselTrack || !carouselSlides.length) {
+            console.error('Carousel elements not found');
+            return;
+        }
+        
+        let currentIndex = 0;
+        const totalSlides = carouselSlides.length;
+        let autoTimer;
+        
+        function goToSlide(n) {
+            currentIndex = n % totalSlides;
+            if (currentIndex < 0) currentIndex += totalSlides;
+            
+            carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            carouselDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+            
+            clearInterval(autoTimer);
+            startAutoPlay();
+        }
+        
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+        
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+        
+        function startAutoPlay() {
+            autoTimer = setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                carouselDots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }, 2000);
+        }
+        
+        // Attach click handlers
+        if (carouselPrev) {
+            carouselPrev.onclick = prevSlide;
+        }
+        
+        if (carouselNext) {
+            carouselNext.onclick = nextSlide;
+        }
+        
+        carouselDots.forEach((dot, index) => {
+            dot.onclick = () => goToSlide(index);
+        });
+        
+        // Start autoplay
+        startAutoPlay();
+        
+        console.log('Carousel initialized successfully');
+    }, 100);
+    
+    // ========================================
     // LAZY LOADING FOR IMAGES
     // ========================================
     if ('IntersectionObserver' in window) {
